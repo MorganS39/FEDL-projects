@@ -78,3 +78,18 @@ i {
     opacity: 1;
     cursor: pointer;
 }
+
+#tweet-quote {
+    float: left;
+    padding: 0px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-right: 5px;
+    height: 30px;
+    width: 40px;
+}
+
+#new-quote {
+    float: right;
+}
