@@ -49,3 +49,14 @@ i {
     font-weight: 500px;
     font-size: 1.75em;
 }
+
+.quote-author {
+    width: 500px;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1em;
+    text-align: right;
+}
+
+.buttons
