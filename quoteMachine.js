@@ -39,4 +39,9 @@ var quoteArray = [
     - Honore de Balzac
     "We've heard that a million monkeys at a million keyboards could produce the complete works of Shakespeare; now, thanks to the Internet, we know that is not true."
     - Robert Welensky
-]
+];
+
+function newQuote() {
+    var randomQuote = quoteArray[Math.floor(Math.random()*quoteArray.length)];
+    document.getElementById("quoteDisplay").innerHTML = quoteArray[randomQuote];
+}
