@@ -14,3 +14,4 @@ user story#10: ability to tweet current quote by clicking #tweet-quote``a elemen
             Use target="_blank" to ensure tweet will load
 user story#11: the #quote-box wrapper element should be horizontally centered.
             run a test with browser's zoom at 100% and page maximized
+*/
