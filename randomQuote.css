@@ -20,3 +20,32 @@ body {
     align-items: center;
     height: 300px;
 }
+
+a {
+    font-weight: 500px;
+    text-decoration: none;
+    color: #fff;
+}
+
+i {
+    font-size: 1em;
+    margin-right: 0.5em;
+}
+
+#quote-box {
+    border-radius: 5px;
+    position: relative;
+    width: 500px;
+    padding: 40px 50px;
+    display: table;
+    background-color: #888;
+}
+
+.quote-text {
+    text-align: center;
+    width: 500px;
+    height: auto;
+    clear: both;
+    font-weight: 500px;
+    font-size: 1.75em;
+}
