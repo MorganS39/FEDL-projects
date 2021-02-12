@@ -32,6 +32,6 @@ var quoteArray = [
 ];
 
 function newQuote() {
-    var randomQuote = quoteArray[Math.floor(Math.random()*quoteArray.length)];
+    var randomQuote = Math.floor(Math.random() * (quoteArray.length));
     document.getElementById("quoteDisplay").innerHTML = quoteArray[randomQuote];
 }
