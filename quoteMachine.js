@@ -29,7 +29,7 @@ var quoteArray = [
     "Politics is not a bad profession. If you succeed there are many rewards, if you disgrace yourself you can always write a book.",
     "Good company and good discourse are the very sinews of virtue.",
     "Behind every great fortune there is a crime.",
-    "I wear the chain I forged in life.  I made it link by link, and yard by yard; I girded it on my own free will, and of my own free will I wore it."
+    "I wear the chain I forged in life.  I made it link by link, and yard by yard; I girded it on my own free will, and of my own free will I wore it.",
     "We've heard that a million monkeys at a million keyboards could produce the complete works of Shakespeare; now, thanks to the Internet, we know that is not true."
 ];
 
