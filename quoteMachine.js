@@ -34,7 +34,7 @@ var quoteArray = [
 ];
 
 // array of random authors
-var aurthorArray = [
+var authorArray = [
     "William Shakespeare",
     "Ralph Waldo Emerson",
     "Izaak Walton",
