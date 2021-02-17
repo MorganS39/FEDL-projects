@@ -15,6 +15,8 @@ user story#10: ability to tweet current quote by clicking #tweet-quote``a elemen
 user story#11: the #quote-box wrapper element should be horizontally centered.
             run a test with browser's zoom at 100% and page maximized
 */
+var currentQuote = "";
+var currentAuthor = "";
 
 // array of random quotes i found
 var quoteArray = [
