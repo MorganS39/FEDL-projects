@@ -45,7 +45,7 @@ var aurthorArray = [
 ];
 
 // function to put new quote in when button is clicked
-function newQuote(quoteArray) {
+function newQuote() {
     var randomQuote = Math.floor(Math.random() * (quoteArray.length));
     document.getElementById("text").innerHTML = quoteArray[randomQuote];
 };
