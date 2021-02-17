@@ -33,5 +33,5 @@ var quoteArray = [
 
 function newQuote() {
     var randomQuote = Math.floor(Math.random() * (quoteArray.length));
-    document.getElementById("quoteDisplay").innerHTML = quoteArray[randomQuote];
+    document.getElementById("text").innerHTML = quoteArray[randomQuote];
 }
