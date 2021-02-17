@@ -15,8 +15,7 @@ user story#10: ability to tweet current quote by clicking #tweet-quote``a elemen
 user story#11: the #quote-box wrapper element should be horizontally centered.
             run a test with browser's zoom at 100% and page maximized
 */
-var currentQuote = "";
-var currentAuthor = "";
+
 
 // array of random quotes i found
 var quoteArray = [
@@ -44,14 +43,20 @@ var aurthorArray = [
     "Jacob Marley"
 ];
 
-// function to put new quote in when button is clicked
-function newQuote() {
-    var randomQuote = Math.floor(Math.random() * (quoteArray.length));
-    document.getElementById("text").innerHTML = quoteArray[randomQuote];
+
+const randomQuote = (data) => {
+    var currentQuote = data.quoteText
+    var currentAuthor = data.quoteAuthor
+    const text = document.querySelector("#quoteText")
+    text.innerHTML = currentQuote
+    const author = document.querySelector("#quoteAuthor")
+    author.innerHTML = `${currentAuthor}`
 };
 
-// function to put new author in when button is clicked
-function newAuthor() {
-    var randomAuthor = Math.floor(Math.random()* authorArray.length));
-    document.getElementById("author").innerHTML = authorAarry[randomAuthor];
-};
+document.querySelector("new-quote").addEventListener("click", () => {
+    getQuote(randomQuote)
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    getQuote(randomQuote)
+});
