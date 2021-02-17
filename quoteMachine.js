@@ -48,8 +48,10 @@ var aurthorArray = [
 function newQuote() {
     var randomQuote = Math.floor(Math.random() * (quoteArray.length));
     document.getElementById("text").innerHTML = quoteArray[randomQuote];
-    var randomAuthor = Math.floor(Math.random() * (authorArray.length));
-    document.getElementById("author").innerHTML = authorArray[randomAuthor];
 };
 
 // function to put new author in when button is clicked
+function newAuthor() {
+    var randomAuthor = Math.floor(Math.random() * (authorArray.length));
+    document.getElementById("author").innerHTML = authorArray[randomAuthor];
+};
