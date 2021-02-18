@@ -39,7 +39,7 @@ render() {
               <h1>
                 {" "}
                 <Badge className="text-align-center" variant="light">
-                  Markdown Previewer
+                  Text Editor
                 </Badge>
               </h1>
             </div>
@@ -58,6 +58,7 @@ render() {
               <div className="input" style={inputStyle}>
                   <textarea 
                     className="input"
+                    id="editor"
                     style={inputStyle}
                     value={this.state.markdown}
                     onChange={(e) => {
@@ -73,7 +74,7 @@ render() {
             <div className="col-md-6">
               {" "}
               <div className="col text-center">
-                <h4>
+                <h4 id="preview">
                   <Badge className="text-align-center" variant="secondary">
                     Preview
                   </Badge>
