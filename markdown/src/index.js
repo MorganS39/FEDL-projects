@@ -152,10 +152,8 @@ And here. | Okay. | I think we get it.
 `;
 
 ReactDOM.render(
-  <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('app')
 );
 
 // If you want to start measuring performance in your app, pass a function
