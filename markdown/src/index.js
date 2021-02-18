@@ -56,7 +56,6 @@ class Apps extends React.Component {
             onClick={this.handlePreviewMaximize}
             text='Previewer'
           />
-          <Preview markdown={this.state.markdown} />
         </div>
       </div>
     );
