@@ -152,8 +152,8 @@ And here. | Okay. | I think we get it.
 `;
 
 ReactDOM.render(
-    <Apps />
-  document.getElementById('root')
+    <Apps />,
+  document.getElementById('app')
 );
 
 // If you want to start measuring performance in your app, pass a function
