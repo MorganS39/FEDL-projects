@@ -17,7 +17,7 @@ renderer.link = function(href, title, text) {
   return `<a target="_blank" href="${href}">${text}` + '</a>';
 };
 
-class App extends React.Component {
+class Apps extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -152,7 +152,7 @@ And here. | Okay. | I think we get it.
 `;
 
 ReactDOM.render(
-    <App />
+    <Apps />
   document.getElementById('app')
 );
 
