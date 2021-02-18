@@ -16,5 +16,5 @@ ${inp.value} <i style="color:red">cant touch this</i>
  onload=function(){
   render();
   ro = new ResizeObserver(render);
-	ro.observe(document.getElementById("box"));
+	ro.observe(document.getElementById("editor"));
  };
