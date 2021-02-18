@@ -1,0 +1,9 @@
+#editor {
+    color:transparent;
+    caret-color: black;
+    font-style: normal;/*must be same as in the svg for caret to align*/
+    font-variant: normal; 
+    font-size:13.3px;
+    padding:2px;
+    font-family:monospace;
+  }
