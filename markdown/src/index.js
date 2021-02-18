@@ -6,17 +6,6 @@ import reportWebVitals from './reportWebVitals';
 
 const projectName = 'markdown-previewer';
 
-// ALLOWS LINE BREAKS WITH RETURN BUTTON
-marked.setOptions({
-  breaks: true
-});
-
-// INSERTS target="_blank" INTO HREF TAGS (required for codepen links)
-const renderer = new marked.Renderer();
-renderer.link = function(href, title, text) {
-  return `<a target="_blank" href="${href}">${text}` + '</a>';
-};
-
 class Apps extends React.Component {
   constructor(props) {
     super(props);
@@ -95,16 +84,6 @@ const Editor = props => {
   );
 };
 
-const Preview = props => {
-  return (
-    <div
-      dangerouslySetInnerHTML={{
-        __html: marked(props.markdown, { renderer: renderer })
-      }}
-      id='preview'
-    />
-  );
-};
 
 const placeholder = `# Welcome to my React Markdown Previewer!
 
