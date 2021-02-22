@@ -1,17 +1,26 @@
 import React from 'react';
 
-function App() {
-  return (
-    <div id="drum-machine">
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Sample Text
-          </p>
-        </header>
-      </div>
-    </div>  
-  );
-}
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      drum: "",
+    };
+  }
 
-export default App;
+
+render() {
+
+
+
+  return (
+      <div id="drum-machine">
+        <div className="App">
+          <h1>
+            Sample text
+          </h1>
+        </div>
+      </div>  
+    );
+  } 
+}
