@@ -11,14 +11,12 @@ export default class App extends React.Component {
 
 render() {
 
-
-
   return (
       <div id="drum-machine">
         <div className="App">
-          <h1>
-            Sample text
-          </h1>
+          <div className="container">
+            
+          </div>
         </div>
       </div>  
     );
