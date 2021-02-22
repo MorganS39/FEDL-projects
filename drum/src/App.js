@@ -17,10 +17,11 @@ render() {
           <div className="container">
             <div className="row mt-4">
               <div className="col text-center">
-                <h1>
-                  Sample text
-                </h1>
-
+                <div id="display">
+                  <h1>
+                    Sample text
+                  </h1>
+                </div>
               </div>
             </div>
           </div>
