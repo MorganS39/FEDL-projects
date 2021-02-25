@@ -41,52 +41,44 @@ render() {
                       </button>
                     </div>
                     <div className="drum-pad">
-                      <button id="eAudio">
+                      <button id="aAudio">
                         A
                         <audio class="clip" id="A" src="https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3">A</audio>
                       </button>
                     </div> <div className="drum-pad">
-                      <button id="eAudio">
+                      <button id="sAudio">
                         S
                         <audio class="clip" id="S" src="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3">S</audio>
                       </button>
                     </div> <div className="drum-pad">
-                      <button id="eAudio">
+                      <button id="dAudio">
                         D
                         <audio class="clip" id="D" src="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3">D</audio>
                       </button>
                     </div>
-                    <a 
-                        class="drum-pad"
-                        id="Z"
-                        title="Z audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
-                    >
-                      Z
-                    </a>
-                    <a 
-                        class="drum-pad"
-                        id="X"
-                        title="X audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
-                    >
-                      X
-                    </a>
-                    <a 
-                        class="drum-pad"
-                        id="C"
-                        title="C audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
-                    >
-                      C
-                    </a>
-                  </div>
+                    </div> <div className="drum-pad">
+                      <button id="zAudio">
+                        Z
+                        <audio class="clip" id="Z" src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3">Z</audio>
+                      </button>
+                    </div>
+                    </div> <div className="drum-pad">
+                      <button id="xAudio">
+                        X
+                        <audio class="clip" id="X" src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3">X</audio>
+                      </button>
+                    </div>
+                    <div className="drum-pad">
+                      <button id="cAudio">
+                        C
+                        <audio class="clip" id="C" src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3">C</audio>
+                      </button>
+                    </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>  
+          </div> 
+        </div> 
     );
   } 
 }
