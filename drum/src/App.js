@@ -22,8 +22,8 @@ render() {
                     Sample text
                   </h1>
                   <div className="drum-pad">
-                  <a 
-                        class="button"
+                    <a 
+                        class="drum-pad"
                         id="Q"
                         title="Q audio"
                         src="#"
@@ -31,7 +31,7 @@ render() {
                       Q
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="W"
                         title="W audio"
                         src="#"
@@ -39,7 +39,7 @@ render() {
                       W
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="E"
                         title="E audio"
                         src="#"
@@ -47,7 +47,7 @@ render() {
                       E
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="A"
                         title="A audio"
                         src="#"
@@ -55,7 +55,7 @@ render() {
                       A
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="S"
                         title="S audio"
                         src="#"
@@ -63,7 +63,7 @@ render() {
                       S
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="D"
                         title="D audio"
                         src="#"
@@ -71,7 +71,7 @@ render() {
                       D
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="Z"
                         title="Z audio"
                         src="#"
@@ -79,7 +79,7 @@ render() {
                       Z
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="X"
                         title="X audio"
                         src="#"
@@ -87,7 +87,7 @@ render() {
                       X
                     </a>
                     <a 
-                        class="button"
+                        class="drum-pad"
                         id="C"
                         title="C audio"
                         src="#"
