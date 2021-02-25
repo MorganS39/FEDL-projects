@@ -21,7 +21,7 @@ render() {
                   <h1>
                     Sample text
                   </h1>
-                  <div className="drum-pad">
+                  <div className="keypad">
                     <a 
                         class="drum-pad"
                         id="Q"
