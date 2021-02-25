@@ -22,30 +22,24 @@ render() {
                     Sample text
                   </h1>
                   <div className="keypad">
-                    <a 
-                        class="drum-pad"
-                        id="Q"
-                        title="Q audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
-                    >
-                      Q
-                    </a>
-                    <a 
-                        class="drum-pad"
-                        id="W"
-                        title="W audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3"
-                    >
-                      W
-                    </a>
-                    <a 
-                        class="drum-pad"
-                        id="E"
-                        title="E audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3"
-                    >
-                      E
-                    </a>
+                    <div className="drum-pad">
+                      <button id="qAudio">
+                        Q
+                        <audio class="clip" id="Q" src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3">Q</audio>
+                      </button>
+                    </div>
+                    <div className="drum-pad">
+                      <button id="wAudio">
+                        W
+                        <audio class="clip" id="W" src="https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3">W</audio>
+                      </button>
+                    </div>
+                    <div className="drum-pad">
+                      <button id="eAudio">
+                        E
+                        <audio class="clip" id="E" src="https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3">E</audio>
+                      </button>
+                    </div>
                     <a 
                         class="drum-pad"
                         id="A"
