@@ -40,30 +40,22 @@ render() {
                         <audio class="clip" id="E" src="https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3">E</audio>
                       </button>
                     </div>
-                    <a 
-                        class="drum-pad"
-                        id="A"
-                        title="A audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3"
-                    >
-                      A
-                    </a>
-                    <a 
-                        class="drum-pad"
-                        id="S"
-                        title="S audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"
-                    >
-                      S
-                    </a>
-                    <a 
-                        class="drum-pad"
-                        id="D"
-                        title="D audio"
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
-                    >
-                      D
-                    </a>
+                    <div className="drum-pad">
+                      <button id="eAudio">
+                        A
+                        <audio class="clip" id="A" src="https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3">A</audio>
+                      </button>
+                    </div> <div className="drum-pad">
+                      <button id="eAudio">
+                        S
+                        <audio class="clip" id="S" src="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3">S</audio>
+                      </button>
+                    </div> <div className="drum-pad">
+                      <button id="eAudio">
+                        D
+                        <audio class="clip" id="D" src="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3">D</audio>
+                      </button>
+                    </div>
                     <a 
                         class="drum-pad"
                         id="Z"
