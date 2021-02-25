@@ -16,44 +16,44 @@ render() {
     qsound.play();
   }
   function wPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var wsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3");
+    wsound.autoplay = false;
+    wsound.play();
   }
   function ePlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var esound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3");
+    esound.autoplay = false;
+    esound.play();
   }
   function aPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var asound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3");
+    asound.autoplay = false;
+    asound.play();
   }
   function sPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var xsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3");
+    xsound.autoplay = false;
+    xsound.play();
   }
   function dPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var dsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3");
+    dsound.autoplay = false;
+    dsound.play();
   }
   function zPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var zsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3");
+    zsound.autoplay = false;
+    zsound.play();
   }
   function xPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var xsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3");
+    xsound.autoplay = false;
+    xsound.play();
   }
   function cPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3");
-    qsound.autoplay = false;
-    qsound.play();
+    var csound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3");
+    csound.autoplay = false;
+    csound.play();
   }
     
   
