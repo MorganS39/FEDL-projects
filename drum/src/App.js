@@ -18,7 +18,7 @@ render() {
               <div className="col text-center">
                 <div id="display">
                   <h1>
-                    Sample text
+                    Drum Machine
                   </h1>
                   <div className="keypad">
                     <button className="drum-pad" id="qAudio">
