@@ -1,197 +1,160 @@
 import React from 'react';
+import Player from '.audioPlay'
+
+const page = {
+  width: '100vw',
+  height: '100vh',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}
+const keyboard = {
+  width: '300px',
+  height: '300px',
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  justifyContent: 'center',
+  border: '1px solid black',
+}
 
 export default class App extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
-      drum: "",
-    };
+      currentKey: [],
+      bankTwo: [
+        {
+          keyCode: 81,
+          keyTrigger: 'Q',
+          id: 'Chord-1',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3',
+        },
+        {
+          keyCode: 87,
+          keyTrigger: 'W',
+          id: 'Chord-2',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3',
+        },
+        {
+          keyCode: 69,
+          keyTrigger: 'E',
+          id: 'Chord-3',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3',
+        },
+        {
+          keyCode: 65,
+          keyTrigger: 'A',
+          id: 'Shaker',
+          url:
+            'https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3',
+        },
+        {
+          keyCode: 83,
+          keyTrigger: 'S',
+          id: 'Open-HH',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3',
+        },
+        {
+          keyCode: 68,
+          keyTrigger: 'D',
+          id: 'Closed-HH',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3',
+        },
+        {
+          keyCode: 90,
+          keyTrigger: 'Z',
+          id: 'Punchy-Kick',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3',
+        },
+        {
+          keyCode: 88,
+          keyTrigger: 'X',
+          id: 'Side-Stick',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3',
+        },
+        {
+          keyCode: 67,
+          keyTrigger: 'C',
+          id: 'Snare',
+          url: 'https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3',
+        },
+      ],
+      isChecked: false,
+      bgColor: 'white',
+    }
+    this.handleKeyPress = this.handleKeyPress.bind(this)
+
+    this.Q = React.createRef()
+    this.W = React.createRef()
+    this.E = React.createRef()
+    this.A = React.createRef()
+    this.D = React.createRef()
+    this.S = React.createRef()
+    this.Z = React.createRef()
+    this.X = React.createRef()
+    this.C = React.createRef()
   }
 
-render() {
+  componentDidMount() {
+    document.addEventListener('keydown', this.handleKeyPress)
+  }
 
-  function qPlay(){
-    var qsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3");
-    qsound.currentTime = 0;
-    qsound.play();
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.handleKeyPress)
   }
-  function wPlay(){
-    var wsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3");
-    wsound.currentTime = 0;
-    wsound.play();
+
+  playAudioOnClick = e => {
+    e.target.children[0].play()
+    this[e.target.id].current.toggleActiveState()
+
   }
-  function ePlay(){
-    var esound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3");
-    esound.currentTime = 0;
-    esound.play();
+
+  handleKeyPress = e => {
+    if (this.state.isChecked) {
+      // in any case uppercase
+      let which = e.key.toUpperCase()
+
+      // check if the pressed key is defined as a keyTrigger in the state else do nothing
+      if (
+        this.state.bankTwo.some(key => {
+          return key.keyTrigger === which
+        })
+      ) {
+        // trigger functions in child
+        this[which].current.playAudio()
+        this[which].current.toggleActiveState()
+      }
+    }
   }
-  function aPlay(){
-    var asound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3");
-    asound.currentTime = 0;
-    asound.play();
+  handleCheck = () => {
+    this.setState({
+      isChecked: !this.state.isChecked,
+    })
   }
-  function sPlay(){
-    var xsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3");
-    xsound.currentTime = 0;
-    xsound.play();
+
+  render() {
+    const drum = this.state.bankTwo.map(player => {
+      return (
+        <Player
+          id={player.keyTrigger}
+          ref={this[player.keyTrigger]}
+          key={player.keyCode}
+          keyTrigger={player.keyTrigger}
+          url={player.url}
+          clicked={this.playAudioOnClick}
+        />
+      )
+    })
+
+    return (
+      <section style={page}>
+        <main style={keyboard}>{drum}</main>
+        <section>
+          <label>play with keyboard</label>
+          <input type="checkbox" onChange={this.handleCheck} />
+        </section>
+      </section>
+    )
   }
-  function dPlay(){
-    var dsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3");
-    dsound.currentTime = 0;
-    dsound.play();
-  }
-  function zPlay(){
-    var zsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3");
-    zsound.currentTime = 0;
-    zsound.play();
-  }
-  function xPlay(){
-    var xsound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3");
-    xsound.currentTime = 0;
-    xsound.play();
-  }
-  function cPlay(){
-    var csound = new Audio("https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3");
-    csound.currentTime = 0;
-    csound.play();
-  }
-    
-  
-  return (
-      <div id="drum-machine">
-        <div className="App">
-          <div className="container">
-            <div className="row mt-4">
-              <div className="col text-center">
-                <div id="display">
-                  <h1>
-                    Drum Machine
-                  </h1>
-                  <div className="keypad">
-                    <button 
-                      className="drum-pad" 
-                      id="qAudio" 
-                      type="button" 
-                      value="sound" 
-                      onClick={qPlay}>
-                      <audio 
-                        class="clip" 
-                        id="Q" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3"
-                      ></audio>
-                    Q
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="wAudio"
-                      type="button" 
-                      value="sound" 
-                      onClick={wPlay}>
-                      <audio 
-                        class="clip" 
-                        id="W" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3"
-                      ></audio>
-                    W
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="eAudio"
-                      type="button" 
-                      value="sound" 
-                      onClick={ePlay}>
-                      <audio 
-                        class="clip" 
-                        id="E" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3"
-                      ></audio>
-                    E
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="aAudio"
-                      type="button" 
-                      value="sound" 
-                      onClick={aPlay}>
-                      <audio 
-                        class="clip" 
-                        id="A" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3"
-                      ></audio>
-                    A
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="sAudio"
-                      type="button" 
-                      value="sound" 
-                      onClick={sPlay}>
-                      <audio 
-                        class="clip" 
-                        id="S" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3"
-                      ></audio>
-                    S
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="dAudio"
-                      type="button" 
-                      value="sound" 
-                      onClick={dPlay}>
-                      <audio 
-                        class="clip" 
-                        id="D" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3"
-                      ></audio>
-                    D
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="zAudio"
-                      type="button" 
-                      value="sound" 
-                      onClick={zPlay}>
-                      <audio 
-                        class="clip" 
-                        id="Z" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3"
-                      ></audio>
-                    Z
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="xAudio"
-                      type="button" 
-                      value="sound" 
-                      onClick={xPlay}>
-                      <audio 
-                        class="clip" 
-                        id="X" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3"
-                      ></audio>
-                    X
-                    </button>
-                    <button 
-                      className="drum-pad" 
-                      id="cAudio" 
-                      type="button" 
-                      value="sound" 
-                      onClick={cPlay}>
-                      <audio 
-                        class="clip" 
-                        id="C" 
-                        src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3"
-                      ></audio>
-                    C
-                    </button>
-                </div>
-              </div>
-            </div>
-          </div> 
-        </div> 
-      </div>
-    </div>
-    );
-  } 
 }
