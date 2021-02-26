@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css'
 
 const URL = "https://s3.amazonaws.com/freecodecamp/drums/";
 
