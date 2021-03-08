@@ -17,6 +17,9 @@ export default class App extends React.Component {
       <div className="container">
         <div className="row mt-4">
           <div className="col text-center">
+            <div id="display">
+              <input></input>
+            </div>
             <div className="keypad">
               {/* Basic structure of numberpad 0-9 and = sign */}
               <div className="numberPad">
