@@ -30,6 +30,7 @@ export default class App extends React.Component {
             <button id="eight">8</button>
             <button id="nine">9</button>
           </div>
+          {/* Basic structure of the operators for math */}
           <div className="mathOperators">
             <button id="add">+</button>
             <button id="subtract">-</button>
