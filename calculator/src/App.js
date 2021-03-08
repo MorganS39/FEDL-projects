@@ -18,6 +18,7 @@ export default class App extends React.Component {
     return (
       <div className="container">
         <div className="keypad">
+          {/* Basic structure of numberpad 0-9 and = sign */}
           <div className="numberPad">
             <div id="equals">
               <a>=</a>
@@ -51,6 +52,20 @@ export default class App extends React.Component {
             </div>
             <div id="nine">
               <a>9</a>
+            </div>
+          </div>
+          <div className="mathOperators">
+            <div id="add">
+              <a>+</a>
+            </div>
+            <div id="subtract">
+              <a>-</a>
+            </div>
+            <div id="multiply"> 
+              <a>*</a>
+            </div>
+            <div id="divide">
+              <a>/</a>
             </div>
           </div>
         </div>
