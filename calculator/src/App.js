@@ -39,6 +39,10 @@ export default class App extends React.Component {
                 <button id="multiply">*</button>
                 <button id="divide">/</button>
               </div>
+              <div className="decClear">
+                <button id="decimal">.</button>
+                <button id="clear">C</button>
+              </div>
             </div>
           </div>
         </div>
